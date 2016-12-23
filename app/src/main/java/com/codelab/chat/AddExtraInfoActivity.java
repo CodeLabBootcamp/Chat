@@ -1,6 +1,8 @@
 package com.codelab.chat;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -11,6 +13,8 @@ import android.widget.Toast;
 
 import com.codelab.chat.Models.FBHelper;
 import com.codelab.chat.Models.User;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -55,7 +59,19 @@ public class AddExtraInfoActivity extends AppCompatActivity {
             user.setGender(this, getSelectedGenderText());
 
             DatabaseReference ref = FBHelper.getReference("users/" + fbUser.getUid());
-            ref.setValue(user);
+            ref.setValue(user).addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    startActivity(new Intent(AddExtraInfoActivity.this
+                            , ChatActivity.class));
+                    finish();
+                }
+            }).addOnFailureListener(this, new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(AddExtraInfoActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+                }
+            });
         } else {
             Toast.makeText(this, "Check all fields", Toast.LENGTH_SHORT).show();
         }

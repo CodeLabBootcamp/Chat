@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddExtraInfoActivity"></activity>
+        <activity android:name=".AddExtraInfoActivity" />
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>
