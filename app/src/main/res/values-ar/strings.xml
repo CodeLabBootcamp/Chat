@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chat</string>
+    <string name="female">انثى</string>
+    <string name="male">ذكر</string>
+    <string name="other">لا اريد ان افصح بالعربي</string>
+</resources>

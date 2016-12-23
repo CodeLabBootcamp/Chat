@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "398748565099",
+    "firebase_url": "https://codelab-chat-916e4.firebaseio.com",
+    "project_id": "codelab-chat-916e4",
+    "storage_bucket": "codelab-chat-916e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398748565099:android:8737fa08222ff075",
+        "android_client_info": {
+          "package_name": "com.codelab.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398748565099-a0vtqauscblunljgghrrl85i2tb4gbvk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codelab.chat",
+            "certificate_hash": "8D9EADD1ACD201D34EED72B0643C4DDCC762E378"
+          }
+        },
+        {
+          "client_id": "398748565099-nmmcl405ii9p4nefr3uq35up0m12f8tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr2oW3RRZFXW5Aal0B3_22faTCDitbX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398748565099-nmmcl405ii9p4nefr3uq35up0m12f8tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
