@@ -58,7 +58,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 if (user == null)
                     startActivity(new Intent(SplashScreenActivity.this
-                            , AddExtraInfoActivity.class));
+                            , ProfileActivity.class));
                 else
                     startActivity(new Intent(SplashScreenActivity.this
                             , ChatActivity.class));

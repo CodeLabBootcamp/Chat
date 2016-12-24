@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 
 import com.codelab.chat.R;
+import com.codelab.chat.Utilities.Gender;
 
 /**
  * Created by SniperDW on 12/23/2016.
@@ -15,6 +16,7 @@ public class User {
     private String name;
     private String email;
     private String address;
+    private String avatar;
     private int age;
     private int gender;
 
@@ -65,11 +67,11 @@ public class User {
     public String getGender(Context context) {
         Resources r = context.getResources();
         switch (gender) {
-            case 1:
+            case Gender.MALE:
                 return r.getString(R.string.male);
-            case 2:
+            case Gender.FEMALE:
                 return r.getString(R.string.female);
-            case 3:
+            case Gender.OTHER:
                 return r.getString(R.string.other);
             default:
                 return "Unknown";
@@ -86,14 +88,23 @@ public class User {
         Resources r = context.getResources();
 
         if (gender.equals(r.getString(R.string.male))) {
-            this.gender = 1;
+            this.gender = Gender.MALE;
         } else if (gender.equals(r.getString(R.string.female))) {
-            this.gender = 2;
+            this.gender = Gender.FEMALE;
         } else if (gender.equals(r.getString(R.string.other))) {
-            this.gender = 3;
+            this.gender = Gender.OTHER;
         } else {
             this.gender = -1;
         }
     }
 
+    public String getAvatar() {
+        if (avatar == null || avatar.isEmpty())
+            avatar = "http://www.google.com";
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 }

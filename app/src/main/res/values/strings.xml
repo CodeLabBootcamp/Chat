@@ -3,4 +3,8 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="other">لا اريد ان افصح</string>
+    <string name="age">Age</string>
+    <string name="address">Address</string>
+    <string name="view_profile">View Profile</string>
+    <string name="gender">Gender</string>
 </resources>
